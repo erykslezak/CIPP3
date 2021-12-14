@@ -1,7 +1,7 @@
 # Variable 'grid' that is a list of empty strings to create grid.
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-# Print grid
+
 def print_grid():
     """
     Prints the list from the grid variable. Sets position for each item
@@ -16,4 +16,14 @@ def print_grid():
     print("\n")
 
 
-print_grid()
+def main():
+    """
+    The main function that gets called once the script has started
+    """
+    print("Welcome to Tic Tac Toe!\n")
+    print("Please select one of the following options.")
+    print("1. Play the game.")
+    print("2. How to play")
+
+
+main()
