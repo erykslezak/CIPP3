@@ -45,6 +45,7 @@ def game_type():
     print("2. Play the game against your friend.")
     while True:
         user_choice = input()
+        global game_level
         if user_choice == "1":
             game_level = 1
             play_game()
@@ -93,14 +94,25 @@ def play_game():
                 if choice in range(1, 10):
                     if grid[choice] == " ":
                         grid[choice] = player_symbol
+                        break
                     else:
                         print("Ups, that space is taken!")
                 else:
                     print("Wrong number. Please use the numbers "
-                        "between 1-9.\n")
+                          "between 1-9.\n")
             except ValueError:
                 print("This is not a number. Please enter a valid number")
 
+            if winner(grid, player_symbol):
+                print_grid()
+                if game_level == 1:
+                    print("You win! Congratulations")
+                    quit()
+                elif game_level == 2:
+                    print("Player one wins! Congratulations")
+                    quit()
+                else:
+                    continue
             print_grid()
 
 
