@@ -144,5 +144,9 @@ def play_game():
             choice = computer_move(grid, opponent_symbol)
             grid[choice] = opponent_symbol
 
+            if winner(grid, opponent_symbol):
+                print_grid()
+                print("Computer wins!")
+                quit()
 
 main()
