@@ -77,6 +77,9 @@ def play_game():
         print_grid()
         # The main player loop that loops through input.
         while True:
+            # Loops through until correct input from user has been
+            # given. Checks if the space is taken and prints out message
+            # to user if the input or space is taken.
             choice = int(input(f"Please choose an empty space for for "
                                f"your next move as '{player_symbol}'."))
             if choice in range(1, 10):
