@@ -55,6 +55,13 @@ def game_type():
             print("Wrong input. Please use the numbers '1' or '2'.")
 
 
+def winner(grid, user):
+    if grid[1] == user:
+        return True
+    else:
+        return False
+
+
 def play_game():
     """
     The main game function that gets executed after all previous options
