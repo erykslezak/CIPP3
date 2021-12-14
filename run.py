@@ -28,11 +28,20 @@ def main():
     while True:
         user_choice = int(input())
         if user_choice == 1:
-            print_grid()
+            game_type()
         elif user_choice == 2:
             print_grid()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
+
+
+def game_type():
+    """
+    Let's user select which game he/she wants to play depending if it's
+    against computer or 2nd player.
+    """
+    print("1. Play the game against computer.")
+    print("2. Play the game against your friend.")
 
 
 main()
