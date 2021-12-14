@@ -72,6 +72,13 @@ def play_game():
     else:
         print("Wrong symbol, please use either 'X' or 'O'.\n")
         play_game()
+    # The main game loop
+    while True:
+        print_grid()
+        # The main player loop that loops through input.
+        while True:
+            choice = int(input(f"Please choose an empty space for for "
+                               f"your next move as '{player_symbol}'."))
 
 
 main()
