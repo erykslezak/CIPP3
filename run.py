@@ -62,10 +62,15 @@ def winner(grid, user):
     each possible combination for winning game. If it's a win then
     returns true otherwise returns false.
     """
-    # Horizontal check
+
     if (grid[1] == user and grid[2] == user and grid[3] == user) or \
        (grid[4] == user and grid[5] == user and grid[6] == user) or \
-       (grid[7] == user and grid[8] == user and grid[9] == user):
+       (grid[7] == user and grid[8] == user and grid[9] == user) or \
+       (grid[1] == user and grid[4] == user and grid[7] == user) or \
+       (grid[2] == user and grid[5] == user and grid[8] == user) or \
+       (grid[3] == user and grid[6] == user and grid[9] == user) or \
+       (grid[1] == user and grid[5] == user and grid[9] == user) or \
+       (grid[3] == user and grid[5] == user and grid[7] == user):
         return True
     else:
         return False
