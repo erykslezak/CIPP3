@@ -1,3 +1,6 @@
+# Imports
+import random # Used for computer moves
+
 # Variable 'grid' that is a list of empty strings to create grid.
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
@@ -76,6 +79,15 @@ def winner(grid, user):
         return False
 
 
+def computer_move(grid, opponent_symbol):
+
+    while True:
+        move = random.randint(1, 9)
+        if grid[move] == " ":
+            return move
+            break
+
+
 def play_game():
     """
     The main game function that gets executed after all previous options
@@ -88,8 +100,10 @@ def play_game():
     player_symbol = input()
     if player_symbol == symbol[0]:
         print('you have chosen x')
+        opponent_symbol = symbol[1]
     elif player_symbol == symbol[1]:
         print('you have chosen o')
+        opponent_symbol = symbol[0]
     else:
         print("Wrong symbol, please use either 'X' or 'O'.\n")
         play_game()
