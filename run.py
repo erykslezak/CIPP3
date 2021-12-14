@@ -57,7 +57,15 @@ def game_type():
 
 
 def winner(grid, user):
-    if grid[1] == user:
+    """
+    Check if the player or computer has won the game by going through
+    each possible combination for winning game. If it's a win then
+    returns true otherwise returns false.
+    """
+    # Horizontal check
+    if (grid[1] == user and grid[2] == user and grid[3] == user) or \
+       (grid[4] == user and grid[5] == user and grid[6] == user) or \
+       (grid[7] == user and grid[8] == user and grid[9] == user):
         return True
     else:
         return False
@@ -103,17 +111,16 @@ def play_game():
             except ValueError:
                 print("This is not a number. Please enter a valid number")
 
-            if winner(grid, player_symbol):
-                print_grid()
-                if game_level == 1:
-                    print("You win! Congratulations")
-                    quit()
-                elif game_level == 2:
-                    print("Player one wins! Congratulations")
-                    quit()
-                else:
-                    continue
+        if winner(grid, player_symbol):
             print_grid()
+            if game_level == 1:
+                print("You win! Congratulations")
+                quit()
+            elif game_level == 2:
+                print("Player one wins! Congratulations")
+                quit()
+            else:
+                return None
 
 
 main()
