@@ -24,6 +24,15 @@ def main():
     print("Please select one of the following options.")
     print("1. Play the game.")
     print("2. How to play")
+    # Loops through user inputs to go to next menu.
+    while True:
+        user_choice = int(input())
+        if user_choice == 1:
+            print_grid()
+        elif user_choice == 2:
+            print_grid()
+        else:
+            print("Wrong input. Please use the numbers '1' or '2'.")
 
 
 main()
