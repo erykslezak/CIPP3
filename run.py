@@ -85,7 +85,6 @@ def computer_move(grid, opponent_symbol):
         move = random.randint(1, 9)
         if grid[move] == " ":
             return move
-            break
 
 
 def play_game():
@@ -140,6 +139,10 @@ def play_game():
                 quit()
             else:
                 return None
+
+        if game_level == 1:
+            choice = computer_move(grid, opponent_symbol)
+            grid[choice] = opponent_symbol
 
 
 main()
