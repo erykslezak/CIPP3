@@ -42,6 +42,14 @@ def game_type():
     """
     print("1. Play the game against computer.")
     print("2. Play the game against your friend.")
+    while True:
+        user_choice = int(input())
+        if user_choice == 1:
+            game_level = 1
+        elif user_choice == 2:
+            game_level = 2
+        else:
+            print("Wrong input. Please use the numbers '1' or '2'.")
 
 
 main()
