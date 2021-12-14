@@ -27,10 +27,10 @@ def main():
     print("2. How to play")
     # Loops through user inputs to go to next menu.
     while True:
-        user_choice = int(input())
-        if user_choice == 1:
+        user_choice = input()
+        if user_choice == "1":
             game_type()
-        elif user_choice == 2:
+        elif user_choice == "2":
             print_grid()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
@@ -44,11 +44,11 @@ def game_type():
     print("1. Play the game against computer.")
     print("2. Play the game against your friend.")
     while True:
-        user_choice = int(input())
-        if user_choice == 1:
+        user_choice = input()
+        if user_choice == "1":
             game_level = 1
             play_game()
-        elif user_choice == 2:
+        elif user_choice == "2":
             game_level = 2
             play_game()
         else:
@@ -71,7 +71,7 @@ def play_game():
     # or 'O'. Prints out to user message that wrong symbol has been
     # chosen, if so restarts the game.
     print(f"Do you want to play as a '{symbol[0]}' or an '{symbol[1]}?' \n")
-    player_symbol = str(input())
+    player_symbol = input()
     if player_symbol == symbol[0]:
         print('you have chosen x')
     elif player_symbol == symbol[1]:
