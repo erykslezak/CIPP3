@@ -87,16 +87,20 @@ def play_game():
             # Loops through until correct input from user has been
             # given. Checks if the space is taken and prints out message
             # to user if the input or space is taken.
-            choice = int(input(f"Please choose an empty space for for "
-                               f"your next move as '{player_symbol}'."))
-            if choice in range(1, 10):
-                if grid[choice] == " ":
-                    grid[choice] = player_symbol
+            try:
+                choice = int(input(f"Please choose an empty space for for "
+                                   f"your next move as '{player_symbol}'."))
+                if choice in range(1, 10):
+                    if grid[choice] == " ":
+                        grid[choice] = player_symbol
+                    else:
+                        print("Ups, that space is taken!")
                 else:
-                    print("Ups, that space is taken!")
-            else:
-                print("Wrong input. Please use the numbers "
-                      "between 1-9.\n")
+                    print("Wrong number. Please use the numbers "
+                        "between 1-9.\n")
+            except ValueError:
+                print("This is not a number. Please enter a valid number")
+
             print_grid()
 
 
