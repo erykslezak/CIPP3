@@ -32,12 +32,15 @@ def print_grid():
     Prints the list from the grid variable. Sets position for each item
     within the list.
     """
-    print(" Game Grid ")
-    print(" " + grid[1] + " | " + grid[2] + " | " + grid[3] + "  ")
-    print("---|---|---")
-    print(" " + grid[4] + " | " + grid[5] + " | " + grid[6] + "  ")
-    print("---|---|---")
-    print(" " + grid[7] + " | " + grid[8] + " | " + grid[9] + "  ")
+    print(" Game Grid " + " "*9 + "Reference Grid")
+    print(" " + grid[1] + " | " + grid[2] + " | " + grid[3] + "  " +
+          " "*10 + " " + "1" + " | " + "2" + " | " + "3" + "  ")
+    print("---|---|---" + " "*11 + "---|---|---")
+    print(" " + grid[4] + " | " + grid[5] + " | " + grid[6] + "  " +
+          " "*10 + " " + "4" + " | " + "5" + " | " + "6" + "  ")
+    print("---|---|---" + " "*11 + "---|---|---")
+    print(" " + grid[7] + " | " + grid[8] + " | " + grid[9] + "  " +
+          " "*10 + " " + "7" + " | " + "8" + " | " + "9" + "  ")
     print("\n")
 
 
