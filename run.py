@@ -79,6 +79,11 @@ def winner(grid, user):
 
 
 def draw(grid):
+    """
+    Checks if the grid has empty strings left. If there is more than 1
+    empty string returns false, otherwise returns true and therefore
+    the game has ended with a draw.
+    """
     if grid.count(" ") > 1:
         return False
     else:
@@ -152,6 +157,9 @@ def play_game():
             else:
                 return None
 
+        # Checks if the grid is full. If yes then prints out message and
+        # calls function return_to_menu to let user choose if he wants
+        # to quit the script or go back to menu.
         if draw(grid):
             print("It's a draw!")
             quit()
@@ -168,6 +176,7 @@ def play_game():
                 print("Computer wins!")
                 quit()
 
+            # Checks for a draw as the player above.
             if draw(grid):
                 print("It's a draw!")
                 quit()
