@@ -310,6 +310,8 @@ def return_to_menu():
         reset_grid()
         main()
     elif choice == "2":
+        games_played = win_amount + lose_amount + draw_amount
+        data.update_cell(new_col_number, 6, games_played)
         quit()
     else:
         print("Invalid input. Please enter a valid number")
