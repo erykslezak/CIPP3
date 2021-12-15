@@ -201,7 +201,7 @@ def play_game():
             # given. Checks if the space is taken and prints out message
             # to user if the input or space is taken.
             try:
-                choice = int(input(f"Please choose an empty space for for "
+                choice = int(input(f"Please choose an empty space for "
                                    f"your next move as '{player_symbol}'. \n"))
                 if choice in range(1, 10):
                     if grid[choice] == " ":
@@ -270,7 +270,7 @@ def play_game():
             # correct symbol onto grid. Same function as the main player
             while True:
                 try:
-                    choice = int(input(f"Please choose an empty space for for "
+                    choice = int(input(f"Please choose an empty space for "
                                        f"your next move as "
                                        f"'{opponent_symbol}'.\n"))
                     if choice in range(1, 10):
