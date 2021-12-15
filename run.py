@@ -20,6 +20,7 @@ data = SHEET.worksheet('data')
 # Variable 'grid' that is a list of empty strings to create grid.
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
+
 win_amount = 0
 lose_amount = 0
 draw_amount = 0
@@ -251,6 +252,8 @@ def play_game():
 
             # Checks for a draw as the player above.
             if draw(grid):
+                draw_amount += 1
+                data.update_cell(new_col_number, 5, draw_amount)
                 print("It's a draw!")
                 return_to_menu()
 
@@ -285,6 +288,8 @@ def play_game():
 
             # Checks for a draw.
             if draw(grid):
+                draw_amount += 1
+                data.update_cell(new_col_number, 5, draw_amount)
                 print("It's a draw!")
                 return_to_menu()
 
