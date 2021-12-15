@@ -20,6 +20,15 @@ def print_grid():
     print("\n")
 
 
+def reset_grid():
+    """
+    Resets the grid and adds new items in order to let user start a new
+    game.
+    """
+    grid.clear()
+    grid.extend([" ", " ", " ", " ", " ", " ", " ", " ", " ", " "])
+
+
 def main():
     """
     The main function that gets called once the script has started
@@ -247,6 +256,7 @@ def return_to_menu():
     choice = input("Would you like to return to main menu? "
                    "Type '1' if yes or type '2' to quit.\n")
     if choice == "1":
+        reset_grid()
         main()
     elif choice == "2":
         quit()
