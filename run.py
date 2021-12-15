@@ -246,6 +246,9 @@ def play_game():
 
             # Checks for computer win same as previously for player.
             if winner(grid, opponent_symbol):
+                global lose_amount
+                lose_amount += 1
+                data.update_cell(new_col_number, 4, lose_amount)
                 print_grid()
                 print("Computer wins!")
                 return_to_menu()
@@ -280,6 +283,8 @@ def play_game():
 
             # Checks for 2nd player win.
             if winner(grid, opponent_symbol):
+                lose_amount += 1
+                data.update_cell(new_col_number, 4, lose_amount)
                 print_grid()
                 print(f"Player two '{opponent_symbol}' wins! Congratulations")
                 return_to_menu()
