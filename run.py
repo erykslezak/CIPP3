@@ -135,12 +135,10 @@ def play_game():
     # or 'O'. Prints out to user message that wrong symbol has been
     # chosen, if so restarts the game.
     print(f"Do you want to play as a '{symbol[0]}' or an '{symbol[1]}?' \n")
-    player_symbol = input()
+    player_symbol = input().lower()
     if player_symbol == symbol[0]:
-        print('you have chosen x')
         opponent_symbol = symbol[1]
     elif player_symbol == symbol[1]:
-        print('you have chosen o')
         opponent_symbol = symbol[0]
     else:
         print("Wrong symbol, please use either 'X' or 'O'.\n")
