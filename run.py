@@ -21,6 +21,14 @@ data = SHEET.worksheet('data')
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
 
+def update_one_cell(worksheet, row, column, value):
+    """
+    updates given worksheet with the given value in the exact
+    one cell pointed by row and column
+    row and column count starts from 1
+    """
+    worksheet.update_cell(row, column, value)
+
 
 def print_grid():
     """
@@ -43,6 +51,14 @@ def reset_grid():
     """
     grid.clear()
     grid.extend([" ", " ", " ", " ", " ", " ", " ", " ", " ", " "])
+
+
+def name():
+    print("Please input your name: ")
+    name = input()
+    new_col_number = len(data.col_values(2)) + 1
+    update_one_cell(data, new_col_number, 2, name)
+    main()
 
 
 def main():
@@ -280,4 +296,4 @@ def return_to_menu():
         print("Invalid input. Please enter a valid number")
 
 
-main()
+name()
