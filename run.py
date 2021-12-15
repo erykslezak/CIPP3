@@ -78,6 +78,13 @@ def winner(grid, user):
         return False
 
 
+def draw(grid):
+    if grid.count(" ") > 1:
+        return False
+    else:
+        return True
+
+
 def computer_move(grid, opponent_symbol):
     """
     Loop for the computer to move to a random position within the grid.
@@ -145,6 +152,10 @@ def play_game():
             else:
                 return None
 
+        if draw(grid):
+            print("It's a draw!")
+            quit()
+
         # Check if the game level is vs computer. If yes then generates
         # a random computer move and sets that grid to computers symbol.
         if game_level == 1:
@@ -155,6 +166,10 @@ def play_game():
             if winner(grid, opponent_symbol):
                 print_grid()
                 print("Computer wins!")
+                quit()
+
+            if draw(grid):
+                print("It's a draw!")
                 quit()
 
 
