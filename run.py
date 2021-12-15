@@ -172,10 +172,10 @@ def play_game():
             print_grid()
             if game_level == 1:
                 print("You win! Congratulations")
-                quit()
+                return_to_menu()
             elif game_level == 2:
                 print("Player one wins! Congratulations")
-                quit()
+                return_to_menu()
             else:
                 return None
 
@@ -185,7 +185,7 @@ def play_game():
         # to quit the script or go back to menu.
         if draw(grid):
             print("It's a draw!")
-            quit()
+            return_to_menu()
 
         # Check if the game level is vs computer. If yes then generates
         # a random computer move and sets that grid to computers symbol.
@@ -197,12 +197,12 @@ def play_game():
             if winner(grid, opponent_symbol):
                 print_grid()
                 print("Computer wins!")
-                quit()
+                return_to_menu()
 
             # Checks for a draw as the player above.
             if draw(grid):
                 print("It's a draw!")
-                quit()
+                return_to_menu()
 
         # Checks if the game level is against another player.
         if game_level == 2:
@@ -229,14 +229,29 @@ def play_game():
             if winner(grid, opponent_symbol):
                 print_grid()
                 print(f"Player two '{opponent_symbol}' wins! Congratulations")
-                quit()
+                return_to_menu()
 
             print_grid()
 
             # Checks for a draw.
             if draw(grid):
                 print("It's a draw!")
-                quit()
+                return_to_menu()
+
+
+def return_to_menu():
+    """
+    An input user gets asked when the game has ended. Either go back to
+    main menu or quit the script.
+    """
+    choice = input("Would you like to return to main menu? "
+                   "Type '1' if yes or type '2' to quit.\n")
+    if choice == "1":
+        main()
+    elif choice == "2":
+        quit()
+    else:
+        print("Invalid input. Please enter a valid number")
 
 
 main()
