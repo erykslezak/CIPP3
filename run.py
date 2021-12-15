@@ -1,5 +1,5 @@
 # Imports
-import random # Used for computer moves
+import random  # Used for computer moves
 
 # Variable 'grid' that is a list of empty strings to create grid.
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
@@ -65,7 +65,6 @@ def winner(grid, user):
     each possible combination for winning game. If it's a win then
     returns true otherwise returns false.
     """
-
     if (grid[1] == user and grid[2] == user and grid[3] == user) or \
        (grid[4] == user and grid[5] == user and grid[6] == user) or \
        (grid[7] == user and grid[8] == user and grid[9] == user) or \
@@ -80,7 +79,11 @@ def winner(grid, user):
 
 
 def computer_move(grid, opponent_symbol):
-
+    """
+    Loop for the computer to move to a random position within the grid.
+    Checks if the grid is an empty string, if yes places correct symbol
+    and breaks out of the loop.
+    """
     while True:
         move = random.randint(1, 9)
         if grid[move] == " ":
@@ -129,6 +132,8 @@ def play_game():
             except ValueError:
                 print("This is not a number. Please enter a valid number")
 
+        # Checks if player has won the game. Two different print outputs
+        # depending on the game that has been selected.
         if winner(grid, player_symbol):
             print_grid()
             if game_level == 1:
@@ -140,13 +145,17 @@ def play_game():
             else:
                 return None
 
+        # Check if the game level is vs computer. If yes then generates
+        # a random computer move and sets that grid to computers symbol.
         if game_level == 1:
             choice = computer_move(grid, opponent_symbol)
             grid[choice] = opponent_symbol
 
+            # Checks for computer win same as previously for player.
             if winner(grid, opponent_symbol):
                 print_grid()
                 print("Computer wins!")
                 quit()
+
 
 main()
