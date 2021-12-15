@@ -203,5 +203,10 @@ def play_game():
                 except ValueError:
                     print("This is not a number. Please enter a valid number")
 
+            if winner(grid, opponent_symbol):
+                print_grid()
+                print(f"Player two '{opponent_symbol}' wins! Congratulations")
+                quit()
+
 
 main()
