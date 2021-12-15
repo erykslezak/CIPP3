@@ -131,7 +131,7 @@ def play_game():
             # to user if the input or space is taken.
             try:
                 choice = int(input(f"Please choose an empty space for for "
-                                   f"your next move as '{player_symbol}'."))
+                                   f"your next move as '{player_symbol}'. \n"))
                 if choice in range(1, 10):
                     if grid[choice] == " ":
                         grid[choice] = player_symbol
@@ -157,6 +157,7 @@ def play_game():
             else:
                 return None
 
+        print_grid()
         # Checks if the grid is full. If yes then prints out message and
         # calls function return_to_menu to let user choose if he wants
         # to quit the script or go back to menu.
@@ -180,6 +181,27 @@ def play_game():
             if draw(grid):
                 print("It's a draw!")
                 quit()
+
+        # Checks if the game level is against another player.
+        if game_level == 2:
+            # Main 2nd player loop that asks for a grid input to place
+            # correct symbol onto grid. Same function as the main player
+            while True:
+                try:
+                    choice = int(input(f"Please choose an empty space for for "
+                                       f"your next move as "
+                                       f"'{opponent_symbol}'.\n"))
+                    if choice in range(1, 10):
+                        if grid[choice] == " ":
+                            grid[choice] = opponent_symbol
+                            break
+                        else:
+                            print("Ups, that space is taken!")
+                    else:
+                        print("Wrong number. Please use the numbers "
+                              "between 1-9.\n")
+                except ValueError:
+                    print("This is not a number. Please enter a valid number")
 
 
 main()
