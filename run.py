@@ -20,13 +20,7 @@ data = SHEET.worksheet('data')
 # Variable 'grid' that is a list of empty strings to create grid.
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
-
-
-def update_one_cell(worksheet, row, column, value):
-    """
-    Updates cells in spreadsheet.
-    """
-    worksheet.update_cell(row, column, value)
+win_amt = 0
 
 
 def print_grid():
@@ -53,12 +47,18 @@ def reset_grid():
 
 
 def name():
+    """
+    Asks users for their name and gives them their ID. Updates google
+    spreadsheet with values to the right columns. Keeps track of
+    users column for other updates.
+    """
+    global new_col_number
     print("Please input your name: ")
     name = input()
     new_col_number = len(data.col_values(2)) + 1
     new_id = new_col_number - 1
-    update_one_cell(data, new_col_number, 2, name)
-    update_one_cell(data, new_col_number, 1, new_id)
+    data.update_cell(new_col_number, 2, name)
+    data.update_cell(new_col_number, 1, new_id)
     main()
 
 
@@ -212,6 +212,9 @@ def play_game():
         # depending on the game that has been selected.
         if winner(grid, player_symbol):
             print_grid()
+            global win_amt
+            win_amt += 1
+            data.update_cell(new_col_number, 3, win_amt)
             if game_level == 1:
                 print("You win! Congratulations")
                 return_to_menu()
