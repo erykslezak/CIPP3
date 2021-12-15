@@ -34,9 +34,33 @@ def main():
         if user_choice == "1":
             game_type()
         elif user_choice == "2":
-            print_grid()
+            how_to_play()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
+
+
+def how_to_play():
+    """
+    Instructions on how to play the game.
+    """
+    print("1. The game is played on a grid that's "
+          "3 squares by 3 squares.")
+    print("2. You choose your symbol being either 'X' or 'O'. "
+          "Your opponent will get the ones that's left.")
+    print("3. Look at the reference grid to know which box "
+          "is assigned to which number.")
+    print("4. The first player to get 3 of her marks in a row "
+          "(up, down, across, or diagonally) is the winner.")
+    print("5. When all 9 squares are full, the game is over. If no "
+          "player has 3 marks in a row, the game ends in a tie.\n")
+    print("Enter '0' to return to main menu.")
+    # Loops through user inputs and returns to main menu.
+    while True:
+        user_choice = input()
+        if user_choice == "0":
+            main()
+        else:
+            print("Wrong input, please use the number '0'.\n")
 
 
 def game_type():
