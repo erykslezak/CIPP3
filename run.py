@@ -203,9 +203,17 @@ def play_game():
                 except ValueError:
                     print("This is not a number. Please enter a valid number")
 
+            # Checks for 2nd player win.
             if winner(grid, opponent_symbol):
                 print_grid()
                 print(f"Player two '{opponent_symbol}' wins! Congratulations")
+                quit()
+
+            print_grid()
+
+            # Checks for a draw.
+            if draw(grid):
+                print("It's a draw!")
                 quit()
 
 
