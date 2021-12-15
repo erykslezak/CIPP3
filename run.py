@@ -21,6 +21,7 @@ data = SHEET.worksheet('data')
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
 
+# Variables needed to update spreadsheet
 win_amount = 0
 lose_amount = 0
 draw_amount = 0
