@@ -20,7 +20,9 @@ data = SHEET.worksheet('data')
 # Variable 'grid' that is a list of empty strings to create grid.
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
-win_amt = 0
+win_amount = 0
+lose_amount = 0
+draw_amount = 0
 
 
 def print_grid():
@@ -212,9 +214,9 @@ def play_game():
         # depending on the game that has been selected.
         if winner(grid, player_symbol):
             print_grid()
-            global win_amt
-            win_amt += 1
-            data.update_cell(new_col_number, 3, win_amt)
+            global win_amount
+            win_amount += 1
+            data.update_cell(new_col_number, 3, win_amount)
             if game_level == 1:
                 print("You win! Congratulations")
                 return_to_menu()
@@ -229,6 +231,9 @@ def play_game():
         # calls function return_to_menu to let user choose if he wants
         # to quit the script or go back to menu.
         if draw(grid):
+            global draw_amount
+            draw_amount += 1
+            data.update_cell(new_col_number, 5, draw_amount)
             print("It's a draw!")
             return_to_menu()
 
