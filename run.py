@@ -21,11 +21,10 @@ data = SHEET.worksheet('data')
 grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 symbol = ["x", "o"]
 
+
 def update_one_cell(worksheet, row, column, value):
     """
-    updates given worksheet with the given value in the exact
-    one cell pointed by row and column
-    row and column count starts from 1
+    Updates cells in spreadsheet.
     """
     worksheet.update_cell(row, column, value)
 
@@ -57,7 +56,9 @@ def name():
     print("Please input your name: ")
     name = input()
     new_col_number = len(data.col_values(2)) + 1
+    new_id = new_col_number - 1
     update_one_cell(data, new_col_number, 2, name)
+    update_one_cell(data, new_col_number, 1, new_id)
     main()
 
 
