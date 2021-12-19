@@ -73,18 +73,26 @@ def add_wins():
     global win_amount
     win_amount += 1
     data.update_cell(new_col_number, 3, win_amount)
+    add_total_games()
 
 
 def add_draws():
     global draw_amount
     draw_amount += 1
     data.update_cell(new_col_number, 5, draw_amount)
+    add_total_games()
 
 
 def add_loses():
     global lose_amount
     lose_amount += 1
     data.update_cell(new_col_number, 4, lose_amount)
+    add_total_games()
+
+
+def add_total_games():
+    games_played = win_amount + lose_amount + draw_amount
+    data.update_cell(new_col_number, 6, games_played)
 
 
 def main():
@@ -323,8 +331,6 @@ def return_to_menu():
         reset_grid()
         main()
     elif choice == "2":
-        games_played = win_amount + lose_amount + draw_amount
-        data.update_cell(new_col_number, 6, games_played)
         quit()
     else:
         print("Invalid input. Please enter a valid number")
