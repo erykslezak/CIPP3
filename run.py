@@ -106,7 +106,7 @@ def main():
     print("2. How to play")
     # Loops through user inputs to go to next menu.
     while True:
-        user_choice = input()
+        user_choice = input().strip()
         if user_choice == "1":
             game_type()
         elif user_choice == "2":
@@ -132,7 +132,7 @@ def how_to_play():
     print("Enter '0' to return to main menu.")
     # Loops through user inputs and returns to main menu.
     while True:
-        user_choice = input()
+        user_choice = input().strip()
         if user_choice == "0":
             main()
         else:
@@ -147,7 +147,7 @@ def game_type():
     print("1. Play the game against computer.")
     print("2. Play the game against your friend.")
     while True:
-        user_choice = input()
+        user_choice = input().strip()
         global game_level
         if user_choice == "1":
             game_level = 1
@@ -211,7 +211,7 @@ def play_game():
     # or 'O'. Prints out to user message that wrong symbol has been
     # chosen, if so restarts the game.
     print(f"Do you want to play as a '{symbol[0]}' or an '{symbol[1]}?' \n")
-    player_symbol = input().lower()
+    player_symbol = input().lower().strip()
     if player_symbol == symbol[0]:
         opponent_symbol = symbol[1]
     elif player_symbol == symbol[1]:
@@ -326,8 +326,11 @@ def return_to_menu():
     An input user gets asked when the game has ended. Either go back to
     main menu or quit the script.
     """
-    choice = input("Would you like to return to main menu? "
-                   "Type '1' if yes or type '2' to quit.\n")
+    print("""
+    Would you like to return to main menu?
+    Type '1' if yes or type '2' to quit.\n
+    """)
+    choice = input().strip()
     if choice == "1":
         reset_grid()
         main()
