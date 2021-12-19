@@ -75,6 +75,18 @@ def add_wins():
     data.update_cell(new_col_number, 3, win_amount)
 
 
+def add_draws():
+    global draw_amount
+    draw_amount += 1
+    data.update_cell(new_col_number, 5, draw_amount)
+
+
+def add_loses():
+    global lose_amount
+    lose_amount += 1
+    data.update_cell(new_col_number, 4, lose_amount)
+
+
 def main():
     """
     The main function that gets called once the script has started
@@ -225,9 +237,7 @@ def play_game():
         # depending on the game that has been selected.
         if winner(grid, player_symbol):
             print_grid()
-            global win_amount
-            win_amount += 1
-            data.update_cell(new_col_number, 3, win_amount)
+            add_wins()
             if game_level == 1:
                 print("You win! Congratulations")
                 return_to_menu()
@@ -242,7 +252,7 @@ def play_game():
         # calls function return_to_menu to let user choose if he wants
         # to quit the script or go back to menu.
         if draw(grid):
-            add_wins()
+            add_draws()
             print("It's a draw!")
             return_to_menu()
 
@@ -254,17 +264,14 @@ def play_game():
 
             # Checks for computer win same as previously for player.
             if winner(grid, opponent_symbol):
-                global lose_amount
-                lose_amount += 1
-                data.update_cell(new_col_number, 4, lose_amount)
+                add_loses()
                 print_grid()
                 print("Computer wins!")
                 return_to_menu()
 
             # Checks for a draw as the player above.
             if draw(grid):
-                draw_amount += 1
-                data.update_cell(new_col_number, 5, draw_amount)
+                add_draws()
                 print("It's a draw!")
                 return_to_menu()
 
@@ -291,9 +298,8 @@ def play_game():
 
             # Checks for 2nd player win.
             if winner(grid, opponent_symbol):
-                lose_amount += 1
-                data.update_cell(new_col_number, 4, lose_amount)
                 print_grid()
+                add_loses()
                 print(f"Player two '{opponent_symbol}' wins! Congratulations")
                 return_to_menu()
 
@@ -301,8 +307,7 @@ def play_game():
 
             # Checks for a draw.
             if draw(grid):
-                draw_amount += 1
-                data.update_cell(new_col_number, 5, draw_amount)
+                add_draws()
                 print("It's a draw!")
                 return_to_menu()
 
