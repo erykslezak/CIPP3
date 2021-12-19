@@ -60,6 +60,7 @@ def name():
     users column for other updates.
     """
     global new_col_number
+    global name
     print("Please input your name: ")
     name = input()
     new_col_number = len(data.col_values(2)) + 1
@@ -331,6 +332,7 @@ def return_to_menu():
         reset_grid()
         main()
     elif choice == "2":
+        print(f"Thank you {name} for playing the game!")
         quit()
     else:
         print("Invalid input. Please enter a valid number")
