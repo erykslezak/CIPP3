@@ -116,7 +116,7 @@ def main():
             game_type()
         elif user_choice == "2":
             how_to_play()
-        elif user_choice == "Q":
+        elif user_choice == "q":
             quit_game()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
@@ -142,7 +142,7 @@ def how_to_play():
         user_choice = input().strip().lower()
         if user_choice == "0":
             main()
-        elif user_choice == "Q":
+        elif user_choice == "q":
             quit_game()
         else:
             print("Wrong input, please use the number '0'.\n")
@@ -164,7 +164,7 @@ def game_type():
         elif user_choice == "2":
             game_level = 2
             play_game()
-        elif user_choice == "Q":
+        elif user_choice == "q":
             quit_game()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
@@ -227,7 +227,7 @@ def play_game():
         opponent_symbol = symbol[1]
     elif player_symbol == symbol[1]:
         opponent_symbol = symbol[0]
-    elif player_symbol == "Q":
+    elif player_symbol == "q":
         quit_game()
     else:
         print("Wrong symbol, please use either 'X' or 'O'.\n")
@@ -341,14 +341,15 @@ def return_to_menu():
     """
     print("Would you like to return to main menu?")
     print("Type '1' if yes or type 'Q' to quit.\n")
-    choice = input().strip()
-    if choice == "1":
-        reset_grid()
-        main()
-    elif choice == "Q":
-        quit_game()
-    else:
-        print("Invalid input. Please enter a valid number")
+    while True:
+        choice = input().strip()
+        if choice == "1":
+            reset_grid()
+            main()
+        elif choice == "q":
+            quit_game()
+        else:
+            print("Invalid input. Please enter a valid number")
 
 
 name()
