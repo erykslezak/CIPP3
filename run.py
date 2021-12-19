@@ -69,6 +69,12 @@ def name():
     main()
 
 
+def add_wins():
+    global win_amount
+    win_amount += 1
+    data.update_cell(new_col_number, 3, win_amount)
+
+
 def main():
     """
     The main function that gets called once the script has started
@@ -236,9 +242,7 @@ def play_game():
         # calls function return_to_menu to let user choose if he wants
         # to quit the script or go back to menu.
         if draw(grid):
-            global draw_amount
-            draw_amount += 1
-            data.update_cell(new_col_number, 5, draw_amount)
+            add_wins()
             print("It's a draw!")
             return_to_menu()
 
