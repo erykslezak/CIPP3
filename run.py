@@ -53,6 +53,11 @@ def reset_grid():
     grid.extend([" ", " ", " ", " ", " ", " ", " ", " ", " ", " "])
 
 
+def quit_game():
+    print(f"Thank you {name} for playing the game!")
+    quit()
+
+
 def name():
     """
     Asks users for their name and gives them their ID. Updates google
@@ -106,11 +111,13 @@ def main():
     print("2. How to play")
     # Loops through user inputs to go to next menu.
     while True:
-        user_choice = input().strip()
+        user_choice = input().strip().lower()
         if user_choice == "1":
             game_type()
         elif user_choice == "2":
             how_to_play()
+        elif user_choice == "Q":
+            quit_game()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
 
@@ -132,9 +139,11 @@ def how_to_play():
     print("Enter '0' to return to main menu.")
     # Loops through user inputs and returns to main menu.
     while True:
-        user_choice = input().strip()
+        user_choice = input().strip().lower()
         if user_choice == "0":
             main()
+        elif user_choice == "Q":
+            quit_game()
         else:
             print("Wrong input, please use the number '0'.\n")
 
@@ -147,7 +156,7 @@ def game_type():
     print("1. Play the game against computer.")
     print("2. Play the game against your friend.")
     while True:
-        user_choice = input().strip()
+        user_choice = input().strip().lower()
         global game_level
         if user_choice == "1":
             game_level = 1
@@ -155,6 +164,8 @@ def game_type():
         elif user_choice == "2":
             game_level = 2
             play_game()
+        elif user_choice == "Q":
+            quit_game()
         else:
             print("Wrong input. Please use the numbers '1' or '2'.")
 
@@ -216,6 +227,8 @@ def play_game():
         opponent_symbol = symbol[1]
     elif player_symbol == symbol[1]:
         opponent_symbol = symbol[0]
+    elif player_symbol == "Q":
+        quit_game()
     else:
         print("Wrong symbol, please use either 'X' or 'O'.\n")
         play_game()
@@ -290,8 +303,8 @@ def play_game():
             # correct symbol onto grid. Same function as the main player
             while True:
                 try:
-                    choice = int(input(f"Please choose an empty space for "
-                                       f"your next move as "
+                    choice = int(input(f"Player TWO, please choose an empty "
+                                       f"space for your next move as "
                                        f"'{opponent_symbol}'.\n"))
                     if choice in range(1, 10):
                         if grid[choice] == " ":
@@ -326,17 +339,14 @@ def return_to_menu():
     An input user gets asked when the game has ended. Either go back to
     main menu or quit the script.
     """
-    print("""
-    Would you like to return to main menu?
-    Type '1' if yes or type '2' to quit.\n
-    """)
+    print("Would you like to return to main menu?")
+    print("Type '1' if yes or type 'Q' to quit.\n")
     choice = input().strip()
     if choice == "1":
         reset_grid()
         main()
-    elif choice == "2":
-        print(f"Thank you {name} for playing the game!")
-        quit()
+    elif choice == "Q":
+        quit_game()
     else:
         print("Invalid input. Please enter a valid number")
 
