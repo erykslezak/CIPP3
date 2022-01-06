@@ -1,31 +1,36 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tic Tac Toe - Game
 
-Welcome erykslezak,
+**[Live site](https://tic-tac-toe-cipp3.herokuapp.com/)**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+---
 
-## Reminders
+<span id="top"></span>
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Index
 
-## Creating the Heroku app
+- <a href="#context">Context</a>
+- <a href="#ux">UX</a>
+  - <a href="#ux-stories">User stories</a>
+  - <a href="#ux-wireframes">Wireframes</a>
+  - <a href="#ux-theme">Theme</a>
+- <a href="#features">Features</a>
+  - <a href="#features-all">Site wide</a>
+  - <a href="#features-future">Still to implement</a>
+- <a href="#technologies">Technologies Used</a>
+- <a href="#testing">Testing</a>
+  - <a href="#testing-auto">Automated</a>
+  - <a href="#testing-user-stories">User stories</a>
+  - <a href="#testing-manual">Manual</a>
+  - <a href="#testing-responsive">Responsiveness</a>
+  - <a href="#testing-unresolved">Unresolved issues</a>
+  - <a href="#testing-bugs">Known bugs</a>
+- <a href="#deployment">Deployment</a>
+- <a href="#credits">Credits</a>
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+---
 
-1. `heroku/python`
-2. `heroku/nodejs`
+<span id="context"></span>
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Context
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
