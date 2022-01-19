@@ -11,17 +11,13 @@
 - <a href="#context">Context</a>
 - <a href="#ux">UX</a>
   - <a href="#ux-stories">User stories</a>
-  - <a href="#ux-wireframes">Wireframes</a>
-  - <a href="#ux-theme">Theme</a>
+- <a href="#flowchart">Flow Chart</a>
 - <a href="#features">Features</a>
-  - <a href="#features-all">Site wide</a>
+  - <a href="#features-all">Game</a>
   - <a href="#features-future">Still to implement</a>
 - <a href="#technologies">Technologies Used</a>
 - <a href="#testing">Testing</a>
-  - <a href="#testing-auto">Automated</a>
-  - <a href="#testing-user-stories">User stories</a>
   - <a href="#testing-manual">Manual</a>
-  - <a href="#testing-responsive">Responsiveness</a>
   - <a href="#testing-unresolved">Unresolved issues</a>
   - <a href="#testing-bugs">Known bugs</a>
 - <a href="#deployment">Deployment</a>
@@ -52,6 +48,14 @@ For ease of reference, the means by which a user's expectations have been met ar
 To be able to play the game against friend or computer. | The game has been designed to let the player have option of both playstyles. When no one is around, get to play against computer or against a friend.
 To be able to see my score. | The score is being exported each round to google spreadsheet where user can see everyone's scores. User can see their wins, loses, draws and total games played.
 A clean and easy navigation throughout the game menu. | The game has been designed on users main input being numbers which guide them through all available options.
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="flowchart"></span>
+
+To understand how the game functions the following flow chart has been made using [Lucid Charts](https://www.lucidchart.com/pages/)
+
+![Game flow chart](docs/flowchart.png)
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
