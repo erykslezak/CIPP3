@@ -92,7 +92,7 @@ A clean and easy navigation throughout the game menu. | The game has been design
 
 ![Symbol choice](docs/symbolchoice.png)
 
-**6. GAME Vs Computer**
+**6. Game Vs Computer**
 
 - User gets to go first and place their symbol on the grid.
 - User has a reference grid beside to not forget which grid has which number assigned.
@@ -100,7 +100,7 @@ A clean and easy navigation throughout the game menu. | The game has been design
 
 ![Game vs computer](docs/movevscomputer.png)
 
-**7. GAME Vs Player**
+**7. Game Vs Player**
 
 - Player ONE gets to go first and place their symbol on the grid.
 - Both players have a reference grid beside to not forget which grid has which number assigned.
@@ -123,3 +123,24 @@ A clean and easy navigation throughout the game menu. | The game has been design
 
 ![game over](docs/gamequit.png)
 
+<span id="features-future"></span>
+
+### Features left to implement
+
+- An option for the user to choose who goes first in the beginning of the game.
+
+  _The ability to decide whether the user wants the computer or player TWO to go first._
+
+- Online multiplayer with lobbies.
+
+  _The ability to see rooms with players wiating for a match._
+
+- Users scores from google spreadsheet printed under not yet implemented 'high score' section.
+
+  _The ability to see other players scores much quicker than going into spreadsheet._
+
+- If the game was played in two player mode, track scores of the 2nd player.
+
+  _The ability to track 2nd player scores so both of the users can see their score. Possibly under a different sheet._
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
