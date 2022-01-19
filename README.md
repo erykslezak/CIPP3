@@ -143,6 +143,10 @@ A clean and easy navigation throughout the game menu. | The game has been design
 
   _The ability to track 2nd player scores so both of the users can see their score. Possibly under a different sheet._
 
+- Improve computers difficulty.
+
+  _Let computer move to one of the grids closest to users choice in order to block them._
+
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
 <span id="technologies"></span>
@@ -164,5 +168,38 @@ A clean and easy navigation throughout the game menu. | The game has been design
 
 - [Stack Overflow](https://stackoverflow.com/)
 - [W3 Schools](https://www.w3schools.com/)
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="testing"></span>
+
+## Testing
+
+<span id="testing-manual"></span>
+
+### Manual testing
+
+The following cases were carried out to ensure that the program is functioning as expected:
+**ALL PASSED**
+
+- PEP8 Linter
+
+  _The code has been pasted and came back with no errors.__
+
+- Features
+
+  _All features have been tested manually to see if all the inputs work as expected._
+
+<span id="testing-unresolved"></span>
+
+### Unresolved Issues
+
+- None.
+
+<span id="testing-bugs"></span>
+
+### Known bugs
+
+- None at present,
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
