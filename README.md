@@ -33,4 +33,32 @@
 
 ## Context
 
+Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O.
+This has been developed for an online use either against a computer or versus another player as you would in the classic game.
+
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+<span id="ux"></span>
+
+## UX
+
+<span id="ux-stories"></span>
+
+### User stories
+
+For ease of reference, the means by which a user's expectations have been met are summarised in the tables below:
+
+| As a **User** I want | How this is achieved                                                                                                                                                           
+:-|:-
+To be able to play the game against friend or computer. | The game has been designed to let the player have option of both playstyles. When no one is around, get to play against computer or against a friend.
+To be able to see my score. | The score is being exported each round to google spreadsheet where user can see everyone's scores. User can see their wins, loses, draws and total games played.
+A clean and easy navigation throughout the game menu. | The game has been designed on users main input being numbers which guide them through all available options.
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="features"></span>
+
+## Features
+
+<span id="features-all"></span>
+
+**1. User Name**
