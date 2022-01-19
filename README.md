@@ -144,3 +144,25 @@ A clean and easy navigation throughout the game menu. | The game has been design
   _The ability to track 2nd player scores so both of the users can see their score. Possibly under a different sheet._
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="technologies"></span>
+
+## Technologies Used
+
+### Languages
+
+- CSS
+- JavaScript - Generated from python essentials template.
+
+### Project management
+
+- [GitHub](https://github.com/) - Version control and deployment
+- [GitPod](https://gitpod.io/) - IDE used to code the site
+- [HerokuAPP](https://www.heroku.com/) - To deploy the program to public
+
+### Online resources
+
+- [Stack Overflow](https://stackoverflow.com/)
+- [W3 Schools](https://www.w3schools.com/)
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
