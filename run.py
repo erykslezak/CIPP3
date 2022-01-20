@@ -288,9 +288,11 @@ def play_game():
             add_wins()
             if game_level == 1:
                 print("You win! Congratulations")
+                print(f"You have won {win_amount} games in total.")
                 return_to_menu()
             elif game_level == 2:
                 print("Player one wins! Congratulations")
+                print(f"You have won {win_amount} games in total.")
                 return_to_menu()
             else:
                 return None
@@ -302,6 +304,7 @@ def play_game():
         if draw(grid):
             add_draws()
             print("It's a draw!")
+            print(f"You have {draw_amount} draws in total.")
             return_to_menu()
 
         # Check if the game level is vs computer. If yes then generates
@@ -315,12 +318,14 @@ def play_game():
                 add_loses()
                 print_grid()
                 print("Computer wins!")
+                print(f"You have lost {lose_amount} games in total.")
                 return_to_menu()
 
             # Checks for a draw as the player above.
             if draw(grid):
                 add_draws()
                 print("It's a draw!")
+                print(f"You have {draw_amount} draws in total.")
                 return_to_menu()
 
         # Checks if the game level is against another player.
@@ -342,13 +347,14 @@ def play_game():
                         print("Wrong number. Please use the numbers "
                               "between 1-9.\n")
                 except ValueError:
-                    print("This is not a number. Please enter a valid number")
+                    print("This is not a number. Please enter a valid input")
 
             # Checks for 2nd player win.
             if winner(grid, opponent_symbol):
                 print_grid()
                 add_loses()
                 print(f"Player two '{opponent_symbol}' wins! Congratulations")
+                print(f"Player ONE, you have lost {lose_amount} games in total.")
                 return_to_menu()
 
             print_grid()
@@ -357,6 +363,7 @@ def play_game():
             if draw(grid):
                 add_draws()
                 print("It's a draw!")
+                print(f"Player ONE, you have {draw_amount} draws in total.")
                 return_to_menu()
 
 
