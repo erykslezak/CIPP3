@@ -27,6 +27,7 @@ lose_amount = 0
 draw_amount = 0
 games_played = 0
 
+
 def print_grid():
     """
     Prints the list from the grid variable. Sets position for each item
