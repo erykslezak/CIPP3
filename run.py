@@ -109,6 +109,7 @@ def main():
     print("Please select one of the following options.")
     print("1. Play the game.")
     print("2. How to play")
+    print("3. Highscores")
     # Loops through user inputs to go to next menu.
     while True:
         user_choice = input().strip().lower()
@@ -137,6 +138,24 @@ def how_to_play():
     print("5. When all 9 squares are full, the game is over. If no "
           "player has 3 marks in a row, the game ends in a tie.\n")
     print("Enter '0' to return to main menu.")
+    # Loops through user inputs and returns to main menu.
+    while True:
+        user_choice = input().strip().lower()
+        if user_choice == "0":
+            main()
+        elif user_choice == "q":
+            quit_game()
+        else:
+            print("Wrong input, please use the number '0'.\n")
+
+def highscores():
+    """
+    Instructions on how to access public highscores.
+    """
+    print("Highscores are public for everyone. The game tracks your total games played, wins, loses and draws.")
+    print("This can be accessed via the following link.")
+    print("https://tinyurl.com/tictactoehighscores")
+    print("Enter '0' to return to main menu or 'Q' to quit the game.")
     # Loops through user inputs and returns to main menu.
     while True:
         user_choice = input().strip().lower()
