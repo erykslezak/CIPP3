@@ -127,9 +127,15 @@ To understand how the game functions the following flow chart has been made usin
 
 ![game over](docs/gamequit.png)
 
+**10. Google spreadsheet**
+
+- Used to track users total games played, their wins, loses and draws.
+- Each player has been given unique ID so there are no duplicates even if the name has been input the same.
+- The spreadsheet can be accessed via the following link [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1-Y5ELK0M6UVZzvqhET_WvSjDOCYEe1yWQOn9r_MsIfo/)
+
 <span id="features-future"></span>
 
-### Features left to implement
+## Features left to implement
 
 - An option for the user to choose who goes first in the beginning of the game.
 
@@ -175,6 +181,21 @@ To understand how the game functions the following flow chart has been made usin
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
+<span id="libraries"></span>
+
+## Libraries Used
+
+- For this project I have only used two external libraries.
+- RANDOM
+
+  _This library was used to generate random move for computer in between 1 and 9._
+
+- GSPREAD
+
+  _This library was used to export data to google spreadsheet._
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
 <span id="testing"></span>
 
 ## Testing
@@ -207,3 +228,9 @@ The following cases were carried out to ensure that the program is functioning a
 - None at present,
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+## Deployment
+
+There is just one branch of this project and the deployed version of this site is the most current version in the repository. The live site can be accessed via this link here - [Tic Tac Toe](https://tic-tac-toe-cipp3.herokuapp.com/)
+
+### How to deploy
