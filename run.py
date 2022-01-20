@@ -25,7 +25,7 @@ symbol = ["x", "o"]
 win_amount = 0
 lose_amount = 0
 draw_amount = 0
-
+games_played = 0
 
 def print_grid():
     """
@@ -97,6 +97,7 @@ def add_loses():
 
 
 def add_total_games():
+    global games_played
     games_played = win_amount + lose_amount + draw_amount
     data.update_cell(new_col_number, 6, games_played)
 
@@ -110,6 +111,7 @@ def main():
     print("1. Play the game")
     print("2. How to play")
     print("3. Highscores")
+    print("4. Print your score")
     print("Q. Quit game")
     # Loops through user inputs to go to next menu.
     while True:
@@ -120,10 +122,12 @@ def main():
             how_to_play()
         elif user_choice == "3":
             highscores()
+        elif user_choice == "4":
+            print_score()
         elif user_choice == "q":
             quit_game()
         else:
-            print("Wrong input. Please use the numbers '1-3' or letter 'Q'.")
+            print("Wrong input. Please use the numbers '1-4' or letter 'Q'.")
 
 
 def how_to_play():
@@ -160,6 +164,27 @@ def highscores():
           "games played, wins, loses and draws.")
     print("This can be accessed via the following link.")
     print("https://tinyurl.com/tictactoehighscores")
+    print("Enter '0' to return to main menu or 'Q' to quit the game.")
+    # Loops through user inputs and returns to main menu.
+    while True:
+        user_choice = input().strip().lower()
+        if user_choice == "0":
+            main()
+        elif user_choice == "q":
+            quit_game()
+        else:
+            print("Wrong input, please use the number '0' or letter 'Q'.\n")
+
+
+def print_score():
+    """
+    Prints out user scores.
+    """
+    print("Your score is as follows:")
+    print(f"Total Wins: {win_amount}")
+    print(f"Total Loses: {lose_amount}")
+    print(f"Total Draws: {draw_amount}")
+    print(f"Total Games Played: {games_played}")
     print("Enter '0' to return to main menu or 'Q' to quit the game.")
     # Loops through user inputs and returns to main menu.
     while True:
@@ -354,7 +379,7 @@ def play_game():
                 print_grid()
                 add_loses()
                 print(f"Player two '{opponent_symbol}' wins! Congratulations")
-                print(f"Player ONE, you have lost {lose_amount} games in total.")
+                print(f"Player ONE, you've lost {lose_amount} games in total.")
                 return_to_menu()
 
             print_grid()
