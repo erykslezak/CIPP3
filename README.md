@@ -257,3 +257,17 @@ Press the **Add** button.
   _Clicking **Enable Automatic Deploys**. This will update once you push updates to your Github._
 
   _Selecting the correct branch for deployment from drop-down menu and pressing **Deploy Branch** button. This will have to be done everytime manually._
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="credits"></span>
+
+## Credits
+
+- [Stack Overflow](https://stackoverflow.com/) - Many issues I have googled brought me there as other coders were in similar situations.
+- [W3 Schools](https://www.w3schools.com/) - Best resource when it comes to attributes etc. Used it many times and without it I would be more confused.
+- [Github](https://github.com/Edb83) - README Layout
+- [Mentor]() - I wanna thank my mentor Spencer for all his input regarding my code and being my second pair of eyes.
+- [Google](https://www.google.com/) - Ammm yes.
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
