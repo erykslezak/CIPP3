@@ -16,6 +16,7 @@
   - <a href="#features-all">Game</a>
   - <a href="#features-future">Still to implement</a>
 - <a href="#technologies">Technologies Used</a>
+- <a href="#libraries">Libraries Used</a>
 - <a href="#testing">Testing</a>
   - <a href="#testing-manual">Manual</a>
   - <a href="#testing-unresolved">Unresolved issues</a>
@@ -53,6 +54,8 @@ A clean and easy navigation throughout the game menu. | The game has been design
 
 <span id="flowchart"></span>
 
+## Game flow chart
+
 To understand how the game functions the following flow chart has been made using [Lucid Charts](https://www.lucidchart.com/pages/)
 
 ![Game flow chart](docs/flowchart.png)
@@ -84,19 +87,31 @@ To understand how the game functions the following flow chart has been made usin
 
 ![How to play](docs/howtoplay.png)
 
-**4. Game Options**
+**4. Highscores**
+
+- Prints to user a instructions of how to access the games public highscores.
+
+![Highscores](docs/highscores.png)
+
+**5. Print score**
+
+- Prints to user a their current score throughout the game.
+
+![Print score](docs/printscore.png)
+
+**6. Game Options**
 
 - User gets the option to play either versus their friend or a computer.
 
 ![Game options](docs/gameoption.png)
 
-**5. Symbol choice**
+**7. Symbol choice**
 
 - Once the game option has been selected, main player gets to choose their own symbol, either 'X' or an 'O'.
 
 ![Symbol choice](docs/symbolchoice.png)
 
-**6. Game Vs Computer**
+**8. Game Vs Computer**
 
 - User gets to go first and place their symbol on the grid.
 - User has a reference grid beside to not forget which grid has which number assigned.
@@ -104,7 +119,7 @@ To understand how the game functions the following flow chart has been made usin
 
 ![Game vs computer](docs/movevscomputer.png)
 
-**7. Game Vs Player**
+**9. Game Vs Player**
 
 - Player ONE gets to go first and place their symbol on the grid.
 - Both players have a reference grid beside to not forget which grid has which number assigned.
@@ -113,7 +128,7 @@ To understand how the game functions the following flow chart has been made usin
 
 ![Game vs player](docs/movevsplayer.png)
 
-**8. Game over**
+**10. Game over**
 
 - Once one of 8 possible win choices is matched, the user gets a message printed with the result either win, lose or a draw.
 - They get the option to exit the program or return to main menu where another game can be started.
@@ -121,13 +136,13 @@ To understand how the game functions the following flow chart has been made usin
 
 ![game over](docs/winvscomp.png)
 
-**9. Game quit**
+**11. Game quit**
 
 - If the user decided to quit, a message is being printed with their name.
 
 ![game over](docs/gamequit.png)
 
-**10. Google spreadsheet**
+**12. Google spreadsheet**
 
 - Used to track users total games played, their wins, loses and draws.
 - Each player has been given unique ID so there are no duplicates even if the name has been input the same.
