@@ -172,7 +172,7 @@ To understand how the game functions the following flow chart has been made usin
 
 - [GitHub](https://github.com/) - Version control and deployment
 - [GitPod](https://gitpod.io/) - IDE used to code the site
-- [HerokuAPP](https://www.heroku.com/) - To deploy the program to public
+- [Heroku](https://www.heroku.com/) - To deploy the program to public
 
 ### Online resources
 
@@ -234,3 +234,26 @@ The following cases were carried out to ensure that the program is functioning a
 There is just one branch of this project and the deployed version of this site is the most current version in the repository. The live site can be accessed via this link here - [Tic Tac Toe](https://tic-tac-toe-cipp3.herokuapp.com/)
 
 ### How to deploy
+
+### Heroku
+To deploy this page to Heroku from its [GitHub repository](https://github.com/erykslezak/CIPP3) the following steps were taken:
+
+- Log into or register new account at [Heroku](https://www.heroku.com/).
+- Click the button **New** in top right corner of the dashboard.
+- From the drop-down menu select **Create new app**.
+- Enter your apps name in the first field and select your region.
+- Click on **Create App** if you are happy with your choices.
+- Once you the app is made you will see yourself within **Deploy** tab. Press on **Settings** tab.
+- Once you are in the **Settings** tab scroll down till you find **Config Vars**.
+- Press the button **Reveal Config Vars** and for 'KEY' field, type in PORT and for the value field type in '8000'.
+Press the **Add** button.
+- Scroll down to **Buildpacks**. Click the button **Add buildpack** and select 'python'. Do the same step and add 'node.js'.
+**PYTHON MUST BE ON TOP OF THE BUILDPACKS. IF IN YOUR CASE NODE.JS IS FIRST, CLICK AND DRAG PYTHON TO TOP AND SAVE.**
+- Return back to the **Deploy** tab. From the deployment method, select 'Github' as the deployment.
+- You will be asked to connect your github account. Confirm and proceed.
+- Search for your repository name and connect.
+- Once that is done and successfully connected, select how you want to push updates from the following options.
+
+  _Clicking **Enable Automatic Deploys**. This will update once you push updates to your Github._
+
+  _Selecting the correct branch for deployment from drop-down menu and pressing **Deploy Branch** button. This will have to be done everytime manually._
