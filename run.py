@@ -123,7 +123,7 @@ def main():
         elif user_choice == "q":
             quit_game()
         else:
-            print("Wrong input. Please use the numbers '1-3' or the letter 'Q'.")
+            print("Wrong input. Please use the numbers '1-3' or letter 'Q'.")
 
 
 def how_to_play():
@@ -149,7 +149,7 @@ def how_to_play():
         elif user_choice == "q":
             quit_game()
         else:
-            print("Wrong input, please use the number '0' or the letter 'Q'.\n")
+            print("Wrong input, please use the number '0' or letter 'Q'.\n")
 
 
 def highscores():
@@ -169,7 +169,7 @@ def highscores():
         elif user_choice == "q":
             quit_game()
         else:
-            print("Wrong input, please use the number '0' or the letter 'Q'.\n")
+            print("Wrong input, please use the number '0' or letter 'Q'.\n")
 
 
 def game_type():
@@ -179,6 +179,7 @@ def game_type():
     """
     print("1. Play the game against computer.")
     print("2. Play the game against your friend.")
+    print("Q. Quit game.")
     while True:
         user_choice = input().strip().lower()
         global game_level
@@ -191,7 +192,7 @@ def game_type():
         elif user_choice == "q":
             quit_game()
         else:
-            print("Wrong input. Please use the numbers '1' or '2'.")
+            print("Wrong input, please use the number '0' or letter 'Q'.\n")
 
 
 def winner(grid, user):
@@ -255,6 +256,7 @@ def play_game():
         quit_game()
     else:
         print("Wrong symbol, please use either 'X' or 'O'.\n")
+        print("If you want to quit the game, type 'Q'.")
         play_game()
     # The main game loop
     while True:
@@ -373,7 +375,7 @@ def return_to_menu():
         elif choice == "q":
             quit_game()
         else:
-            print("Invalid input. Please enter a valid number")
+            print("Invalid input. Please enter a valid input.")
 
 
 name()
