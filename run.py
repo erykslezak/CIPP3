@@ -77,6 +77,10 @@ def name():
 
 
 def add_wins():
+    """
+    Updates the 'win' column in google spreadsheet 
+    for each of users win.
+    """
     global win_amount
     win_amount += 1
     data.update_cell(new_col_number, 3, win_amount)
@@ -84,6 +88,10 @@ def add_wins():
 
 
 def add_draws():
+    """
+    Updates the 'draw' column in google spreadsheet 
+    for each of users draw.
+    """
     global draw_amount
     draw_amount += 1
     data.update_cell(new_col_number, 5, draw_amount)
@@ -91,6 +99,10 @@ def add_draws():
 
 
 def add_loses():
+    """
+    Updates the 'lose' column in google spreadsheet 
+    for each of users lose.
+    """
     global lose_amount
     lose_amount += 1
     data.update_cell(new_col_number, 4, lose_amount)
@@ -98,6 +110,11 @@ def add_loses():
 
 
 def add_total_games():
+    """
+    Calculates the amount of games played by adding the win, loses 
+    and draws together and updates the 'total games played' column 
+    in google spreadsheet.
+    """
     global games_played
     games_played = win_amount + lose_amount + draw_amount
     data.update_cell(new_col_number, 6, games_played)
