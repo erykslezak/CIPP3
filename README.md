@@ -224,8 +224,7 @@ The following cases were carried out to ensure that the program is functioning a
 
 - PEP8 Linter
 
-  _The code has been pasted and came back with no errors.__
-
+  _The code has been pasted and came back with no errors._
 - Features
 
   _All features have been tested manually to see if all the inputs work as expected._
@@ -234,13 +233,13 @@ The following cases were carried out to ensure that the program is functioning a
 
 ### Unresolved Issues
 
-- None.
+- None
 
 <span id="testing-bugs"></span>
 
 ### Known bugs
 
-- None at present,
+- None at present
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
